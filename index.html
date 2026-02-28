@@ -4,553 +4,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrandLoom X | Digital Marketing Agency</title>
-    <meta name="description" content="BrandLoom X - A high-end digital marketing agency shaping the future of brands.">
-    <!-- Premium Typography: Outfit (Headlines/Signature), Inter (Body) -->
+    <title>AI Nexus | Future Tech & AI Solutions</title>
+    <meta name="description"
+        content="AI Nexus is a futuristic tech and AI solutions agency specializing in immersive digital experiences.">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@700;800;900&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet" crossorigin="anonymous">
+    <!-- CSS Animation Library Content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Global SVG Definitions -->
-    <svg width="0" height="0" style="position:absolute; width:0; height:0; overflow:hidden;">
-        <defs>
-            <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#8E2DE2" />
-                <stop offset="100%" stop-color="#4A00E0" />
-            </linearGradient>
-            <linearGradient id="thread-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#8E2DE2" />
-                <stop offset="100%" stop-color="#4A00E0" />
-            </linearGradient>
-        </defs>
-    </svg>
+    <!-- Custom Liquid Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
 
-    <!-- The "Loom" Thread Animations -->
-    <div class="loom-threads-container">
-        <!-- SVG paths acting as weaving threads -->
-        <svg class="loom-thread thread-1" viewBox="0 0 1000 1000" preserveAspectRatio="none">
-            <path d="M0,100 C200,300 300,50 500,200 C700,350 800,100 1000,400" />
-        </svg>
-        <svg class="loom-thread thread-2" viewBox="0 0 1000 1000" preserveAspectRatio="none">
-            <path d="M0,500 C400,200 600,800 1000,400" />
-        </svg>
-        <svg class="loom-thread thread-3" viewBox="0 0 1000 1000" preserveAspectRatio="none">
-            <path d="M0,800 C300,900 600,300 1000,600" />
-        </svg>
+    <!-- Background Dynamic Particles System -->
+    <div id="particles-container"></div>
+
+    <!-- Pulsing Neon Promo Bar -->
+    <div class="neon-promo-bar">
+        <div class="promo-content">
+            <span class="pulse-dot red-pulse"></span>
+            <span class="promo-text"><strong>Early Bird Tech-Invasion Offer!</strong> Register within the next 48 Hours
+                and get a flat 30% Discount on all Advanced AI & Web Architecture courses.</span>
+            <span class="countdown-timer" id="promo-countdown">47:59:59</span>
+            <a href="#apply" class="apply-now-btn"><span>Apply Now</span></a>
+        </div>
     </div>
 
-    <!-- Floating Background SVGs -->
-    <div class="bg-icons-container">
-        <!-- Facebook -->
-        <svg class="bg-icon float-1 breath-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="60"
-            height="60">
-            <path fill="currentColor"
-                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
-        </svg>
-        <!-- Instagram -->
-        <svg class="bg-icon float-2 breath-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="60"
-            height="60">
-            <path fill="currentColor"
-                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-        </svg>
-        <!-- LinkedIn -->
-        <svg class="bg-icon float-3 breath-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="60"
-            height="60">
-            <path fill="currentColor"
-                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
-        </svg>
-        <!-- Marketing / Bullseye -->
-        <svg class="bg-icon float-4 breath-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="60"
-            height="60">
-            <path fill="currentColor"
-                d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z" />
-        </svg>
-        <!-- Chart / Growth -->
-        <svg class="bg-icon float-5 breath-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="60"
-            height="60">
-            <path fill="currentColor"
-                d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-9.6 0-18.2-5.7-22-14.5c-2.7-6.2-2.7-13.4-.6-20.2c1.7-5.5 5.5-10.2 10.6-13.3H464c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H64V64zm384 192H96V160H448v96z" />
-        </svg>
-    </div>
-
-    <!-- Sticky Glassmorphism Header -->
-    <header class="sticky-header">
-        <div class="header-container">
-            <div class="logo"><a href="#home">BrandLoom <span class="gradient-text">X</span></a></div>
-            <nav class="nav-links">
-                <a href="#home" class="interactive-link">Home</a>
-                <a href="#services" class="interactive-link">Services</a>
-                <a href="#gallery" class="interactive-link">Gallery</a>
-                <a href="#about" class="interactive-link">About Me</a>
-                <a href="#careers" class="interactive-link">Careers</a>
-                <a href="#contact" class="interactive-link">Contact</a>
-            </nav>
-            <div class="header-socials" style="display: flex; gap: 15px; align-items: center; margin-left: 20px;">
-                <a href="https://www.facebook.com/share/1bgy1SBogP/" class="social-icon fb-icon" target="_blank"
-                    rel="noopener noreferrer">
-                    <svg viewBox="0 0 320 512" width="22" height="22">
-                        <path fill="currentColor"
-                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
-                    </svg>
-                </a>
-                <a href="https://wa.me/923079661669" class="social-icon header-wa" target="_blank"
-                    rel="noopener noreferrer">
-                    <svg viewBox="0 0 448 512" width="22" height="22">
-                        <path fill="currentColor" d="M380.9 97.1C...<TRUNCATED>..." />
-                    </svg>
-                </a>
-                <a href="mailto:xbrandloom@gmail.com" class="social-icon header-gmail">
-                    <svg viewBox="0 0 512 512" width="22" height="22">
-                        <path fill="currentColor" d="M48 64C...<TRUNCATED>..." />
-                    </svg>
-                </a>
-            </div>
+    <!-- Glassmorphism Header -->
+    <header class="glass-header" id="main-header">
+        <div class="logo">
+            <span class="logo-text">AI Nexus</span>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home" class="nav-link active" data-target="home">Home</a></li>
+                <li><a href="#nexus-origin" class="nav-link" data-target="nexus-origin">About Us</a></li>
+                <li><a href="#services" class="nav-link" data-target="services">Services</a></li>
+                <li><a href="#careers" class="nav-link" data-target="careers">Careers</a></li>
+                <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-action">
+            <a href="#contact" class="magnetic-btn primary-btn"><span>Initiate Protocol</span></a>
         </div>
     </header>
 
-    <main class="container">
-        <!-- Hero Section -->
-        <section id="home" class="hero scroll-reveal">
-            <h1 class="hero-title outfit-font" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">
-                Architecting <span class="gradient-text">Growth</span>
-            </h1>
-            <p class="hero-subtitle">We Weave Your Vision into a Digital Legacy.</p>
-            <a href="#services" class="cta-button explore-btn">
-                <span class="cta-text">Explore</span>
-            </a>
-        </section>
+    <!-- Main Content Area with Seamless Transitions -->
+    <main id="app-content">
+        <!-- Sections will be structured here -->
 
-        <!-- Our Milestones (Experience Counters) -->
-        <section id="milestones" class="milestones scroll-reveal">
-            <div class="interactive-header-container" onclick="this.classList.toggle('active')">
-                <div class="header-gradient-bar"></div>
-                <h2 class="section-title interactive-header glow-pulsing-header">Our <span
-                        class="gradient-text">Milestones</span></h2>
-                <h4 class="vision-subtitle brand-signature-bold"
-                    style="font-size: 1rem; color: var(--text-secondary); margin-top: -10px;">BrandLoom X Experience
-                </h4>
-            </div>
+        <!-- Home Section -->
+        <section id="home" class="page-section active-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="reveal-text">Architecting the <span class="text-gradient">Intelligence</span> of
+                        Tomorrow.
+                    </h1>
+                    <p class="reveal-text delay-1">Global Leaders in AI Solutions & Future Tech. Empowering 25+
+                        Countries.</p>
+                    <div class="hero-actions reveal-text delay-2">
+                        <a href="#services" class="magnetic-btn primary-btn" data-target="services"><span>Explore
+                                Systems</span></a>
+                        <a href="#nexus-origin" class="magnetic-btn outline-btn" data-target="nexus-origin"><span>System
+                                Core</span></a>
+                    </div>
 
-            <div class="counter-grid">
-                <div class="glass-card counter-box scroll-pulse-zoom">
-                    <h3 class="counter-number gradient-text" data-target="1">0</h3>
-                    <p>Country (Pakistan) - Nationwide Impact</p>
-                </div>
-                <div class="glass-card counter-box scroll-pulse-zoom">
-                    <h3 class="counter-number gradient-text" data-target="50">0</h3><span
-                        class="gradient-text counter-plus">+</span>
-                    <p>Marketing Projects</p>
-                </div>
-                <div class="glass-card counter-box scroll-pulse-zoom">
-                    <h3 class="counter-text gradient-text">100%</h3>
-                    <p>Dedicated Strategic Support</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Grid -->
-        <section id="services" class="services scroll-reveal">
-            <div class="interactive-header-container" onclick="this.classList.toggle('active')">
-                <div class="header-gradient-bar"></div>
-                <h2 class="section-title interactive-header glow-pulsing-header">BrandLoom X <span
-                        class="gradient-text">Services</span></h2>
-                <h4 class="vision-subtitle brand-signature-bold"
-                    style="font-size: 1rem; color: var(--text-secondary); margin-top: -10px;">BrandLoom X Expertise</h4>
-            </div>
-            <div class="bento-grid">
-                <div class="glass-card interactive-service-card">
-                    <div class="card-icon interactive-svg pulse-icon">
-                        <svg viewBox="0 0 512 512" width="24" height="24">
-                            <path fill="currentColor"
-                                d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z" />
-                        </svg>
-                    </div>
-                    <h3>Strategic SMM</h3>
-                    <p>Building influential communities and dominating social algorithms.</p>
-                </div>
-                <div class="glass-card interactive-service-card">
-                    <div class="card-icon interactive-svg pulse-icon">
-                        <svg viewBox="0 0 384 512" width="24" height="24">
-                            <path fill="currentColor"
-                                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
-                        </svg>
-                    </div>
-                    <h3>Viral Content</h3>
-                    <p>Thumb-stopping creatives engineered for maximum shareability.</p>
-                </div>
-                <div class="glass-card interactive-service-card">
-                    <div class="card-icon interactive-svg pulse-icon">
-                        <svg viewBox="0 0 512 512" width="24" height="24">
-                            <path fill="currentColor"
-                                d="M32 32c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-44.2 0-80-35.8-80-80V64C0 46.3 14.3 32 32 32zM160 224c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V256c0-17.7 14.3-32 32-32zm128-64c17.7 0 32 14.3 32 32v128c0 17.7-14.3 32-32 32s-32-14.3-32-32V192c0-17.7 14.3-32 32-32zm128-64c17.7 0 32 14.3 32 32v192c0 17.7-14.3 32-32 32s-32-14.3-32-32V128c0-17.7 14.3-32 32-32z" />
-                        </svg>
-                    </div>
-                    <h3>Performance Ads</h3>
-                    <p>Data-driven campaigns that convert clicks into loyal customers.</p>
-                </div>
-                <div class="glass-card interactive-service-card">
-                    <div class="card-icon interactive-svg pulse-icon">
-                        <svg viewBox="0 0 576 512" width="24" height="24">
-                            <path fill="currentColor"
-                                d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM128 256a160 160 0 1 1 320 0 160 160 0 1 1 -320 0zm160-80a80 80 0 1 0 0 160 80 80 0 1 0 0-160z" />
-                        </svg>
-                    </div>
-                    <h3>Brand Identity</h3>
-                    <p>Crafting memorable visual aesthetics that resonate and endure.</p>
-                </div>
-                <!-- Search Engine Optimization -->
-                <div class="glass-card interactive-service-card">
-                    <div class="card-icon interactive-svg pulse-icon">
-                        <svg viewBox="0 0 512 512" width="24" height="24">
-                            <path fill="currentColor"
-                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                        </svg>
-                    </div>
-                    <h3>Search Engine Optimization</h3>
-                    <p>Drive organic growth and dominate search rankings.</p>
-                </div>
-                <!-- Web Development -->
-                <div class="glass-card interactive-service-card">
-                    <div class="card-icon interactive-svg pulse-icon">
-                        <svg viewBox="0 0 640 512" width="24" height="24">
-                            <path fill="currentColor"
-                                d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
-                        </svg>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Crafting high-performance, conversion-driven digital experiences.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Industries We Transform section -->
-        <section id="industries" class="industries scroll-reveal">
-            <div class="interactive-header-container" onclick="this.classList.toggle('active')">
-                <div class="header-gradient-bar"></div>
-                <h2 class="section-title interactive-header glow-pulsing-header">Industries We <span
-                        class="gradient-text">Transform</span></h2>
-                <h4 class="vision-subtitle brand-signature-bold"
-                    style="font-size: 1rem; color: var(--text-secondary); margin-top: -10px;">BrandLoom X Partners</h4>
-            </div>
-
-            <div class="industry-grid">
-                <!-- Shopping -->
-                <div class="glass-card industry-card glow-border-hover zoom-hover">
-                    <div class="industry-icon pulse-icon gradient-svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="32" height="32">
-                            <path fill="currentColor"
-                                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
-                        </svg>
-                    </div>
-                    <h4>Shopping & Retail</h4>
-                </div>
-                <!-- Real Estate -->
-                <div class="glass-card industry-card glow-border-hover zoom-hover">
-                    <div class="industry-icon pulse-icon gradient-svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="32" height="32">
-                            <path fill="currentColor"
-                                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
-                        </svg>
-                    </div>
-                    <h4>Real Estate</h4>
-                </div>
-                <!-- E-commerce -->
-                <div class="glass-card industry-card glow-border-hover zoom-hover">
-                    <div class="industry-icon pulse-icon gradient-svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
-                            <path fill="currentColor"
-                                d="M21.7 42.1L0 12.1 24.3 0 46 30h447v30L469 196H249L21.7 42.1zM512 256c0-23.7-13.3-44.4-32.8-54.7L469 196H249L72 76 0 178c18.5 25.4 49 42 82.5 42H88v72h64v-72h48v72h64v-72h160v120H152v64h304c30.9 0 56-25.1 56-56V256zM152 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm224-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
-                        </svg>
-                    </div>
-                    <h4>E-Commerce</h4>
-                </div>
-                <!-- Sports -->
-                <div class="glass-card industry-card glow-border-hover zoom-hover">
-                    <div class="industry-icon pulse-icon gradient-svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
-                            <path fill="currentColor"
-                                d="M381.1 113.8L281.4 14.1c-18.7-18.7-49.1-18.7-67.9 0L14.1 213.6c-18.7 18.7-18.7 49.1 0 67.9l99.7 99.7c18.7 18.7 49.1 18.7 67.9 0l199.5-199.5c18.7-18.7 18.7-49.1 0-67.9zM497.9 213.6L398.2 113.8c-18.7-18.7-49.1-18.7-67.9 0l-33.9 33.9L464 315.3l33.9-33.9c18.8-18.7 18.8-49.1 0-67.8zM14.1 413.3L113.8 513c18.7 18.7 49.1 18.7 67.9 0l33.9-33.9L48 311.5 14.1 345.4c-18.7 18.8-18.7 49.2 0 67.9zM312 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56z" />
-                        </svg>
-                    </div>
-                    <h4>Sports & Fitness</h4>
-                </div>
-                <!-- Investment -->
-                <div class="glass-card industry-card glow-border-hover zoom-hover">
-                    <div class="industry-icon pulse-icon gradient-svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="32" height="32">
-                            <path fill="currentColor"
-                                d="M96 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H160c-35.3 0-64-28.7-64-64V96zM48 400c-26.5 0-48-21.5-48-48V64C0 28.7 28.7 0 64 0h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H64v288H448c17.7 0 32 14.3 32 32s-14.3 32-32 32H48zm144-80v64H448V320H192zm224-64v64h64V256H416zm-96-96v64h64V160H320zm-96-96v64h64V64H224z" />
-                        </svg>
-                    </div>
-                    <h4>Investment & Finance</h4>
-                </div>
-                <!-- Household -->
-                <div class="glass-card industry-card glow-border-hover zoom-hover">
-                    <div class="industry-icon pulse-icon gradient-svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
-                            <path fill="currentColor"
-                                d="M32 32H480c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32H32C14.3 128 0 113.7 0 96V64C0 46.3 14.3 32 32 32zm0 128H480V416c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V160zm128 80c0 8.8 7.2 16 16 16H336c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z" />
-                        </svg>
-                    </div>
-                    <h4>Household & Decor</h4>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Mockup Gallery Section -->
-        <section id="gallery" class="gallery scroll-reveal">
-            <div class="interactive-header-container" onclick="this.classList.toggle('active')">
-                <div class="header-gradient-bar"></div>
-                <h2 class="section-title interactive-header glow-pulsing-header">Visual <span
-                        class="gradient-text">Showcase</span></h2>
-            </div>
-            <div class="phone-gallery" style="align-items: flex-end;">
-                <!-- 3D Phone 1: Instagram Format -->
-                <div class="phone-wrapper"
-                    style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                    <div class="phone-frame phone-left">
-                        <div class="screen">
-                            <div class="mockup-header">
-                                <span>@brandloom.x</span>
-                            </div>
-                            <div class="mockup-content gradient-bg">
-                                <em class="growth-blueprints">#Growth Blueprints</em>
-                            </div>
+                    <div class="home-stats-counter reveal-text delay-3 mt-4">
+                        <div class="counter-item">
+                            <span class="counter-num"><span class="counter-val" data-target="150">0</span>+</span>
+                            <span class="counter-label">Projects</span>
+                        </div>
+                        <div class="counter-item">
+                            <span class="counter-num"><span class="counter-val" data-target="1200">0</span>+</span>
+                            <span class="counter-label">Graduates</span>
+                        </div>
+                        <div class="counter-item">
+                            <span class="counter-num"><span class="counter-val" data-target="25">0</span>+</span>
+                            <span class="counter-label">Countries</span>
                         </div>
                     </div>
                 </div>
+                <!-- The Core: 3D Pulsating Orb -->
+                <div class="hero-visual">
+                    <div class="ai-heart-container">
+                        <div class="ai-heart-orb">
+                            <div class="orb-core"></div>
+                            <div class="orb-ring ring-1"></div>
+                            <div class="orb-ring ring-2"></div>
+                            <div class="orb-ring ring-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <!-- 3D Phone 2: Main Center (Web Development Mastery) -->
-                <div class="phone-wrapper"
-                    style="display: flex; flex-direction: column; align-items: center; gap: 15px; position: relative; z-index: 5;">
-                    <div class="phone-frame phone-center dev-frame" onclick="this.classList.toggle('show-desc')">
-                        <div class="screen">
-                            <div class="mockup-header" style="justify-content: space-between;">
-                                <span class="gradient-text" style="font-weight:bold; font-size: 0.85rem;">Web
-                                    Mastery</span>
-                                <div class="mac-dots" style="display: flex; gap: 4px;">
-                                    <span style="width:8px; height:8px; background:#FF5F56; border-radius:50%;"></span>
-                                    <span style="width:8px; height:8px; background:#FFBD2E; border-radius:50%;"></span>
-                                    <span style="width:8px; height:8px; background:#27C93F; border-radius:50%;"></span>
-                                </div>
+        <!-- The Nexus Origin (About Us) Section -->
+        <section id="nexus-origin" class="page-section">
+            <div class="neural-web-bg" id="dna-background"></div>
+            <div class="container origin-container">
+                <div class="origin-content">
+                    <h2 class="reveal-text text-gradient vibrate-heading-target">The Nexus Origin</h2>
+                    <h3 class="reveal-text delay-1">Beyond Code: The Intelligence Revolution.</h3>
+                    <p class="reveal-text delay-2 type-writer-text">Nexus Core wasn't founded; it was initialized. We are a collective of digital architects, neural engineers, and quantum theorists dedicated to pushing the boundaries of what machine intelligence can achieve.</p>
+                    <p class="reveal-text delay-3 type-writer-text">Our mission is to bridge the gap between human intuition and algorithmic precision. From automating global logistics to architecting neural networks, we build the systems that the future depends on.</p>
+                </div>
+                <div class="origin-visual">
+                    <img src="assets/glass_brain.png" alt="Futuristic Glass Brain" class="zero-gravity glass-brain-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="reveal-text">Core <span class="text-gradient">Capabilities</span></h2>
+                    <p class="reveal-text delay-1">Neural network integrations and advanced algorithmic structures.</p>
+                </div>
+
+                <div class="services-grid floating-elements">
+                    <!-- Interactive Floating Hexagons -->
+                    <div class="hex-service-card zero-gravity">
+                        <div class="hex-inner">
+                            <div class="hex-front">
+                                <div class="hex-icon">🤖</div>
+                                <h3>Enterprise AI</h3>
                             </div>
-                            <div class="mockup-content center-content dev-content"
-                                style="flex-direction: column; align-items:flex-start; padding: 20px; font-family: monospace; font-size: 0.8rem; text-align: left; background: var(--bg-color);">
-                                <span style="color: var(--gradient-start); font-weight: bold;">const</span> <span
-                                    style="color: #61DAFB;">BrandLoom</span> = {
-                                <br>&nbsp;&nbsp;<span style="color: var(--text-secondary);">build:</span> <span
-                                    style="color: #A6E22E;">"Next-Gen"</span>,
-                                <br>&nbsp;&nbsp;<span style="color: var(--text-secondary);">speed:</span> <span
-                                    style="color: #A6E22E;">"100/100"</span>,
-                                <br>&nbsp;&nbsp;<span style="color: var(--text-secondary);">ux:</span> <span
-                                    style="color: #A6E22E;">"Flawless"</span>
-                                <br>};
-                                <br><br>
-                                <span style="color: var(--gradient-end);">></span> <span class="typing-cursor">_</span>
-
-                                <div class="click-reveal-desc gradient-bg">
-                                    <p>Crafting high-performance, conversion-driven digital experiences.</p>
-                                </div>
+                            <div class="hex-back">
+                                <h3>Enterprise AI</h3>
+                                <p>Scalable artificial intelligence systems for global firms.</p>
+                                <a href="#" class="inline-btn">View Details ></a>
                             </div>
                         </div>
                     </div>
-                    <!-- New Caption Below Phone 2 -->
-                    <h4 class="gradient-text"
-                        style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.2rem; letter-spacing: 1px;">
-                        Web Architecture</h4>
-                </div>
 
-                <!-- 3D Phone 3: Facebook/Ads Format -->
-                <div class="phone-wrapper"
-                    style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                    <div class="phone-frame phone-right">
-                        <div class="screen">
-                            <div class="mockup-header">
-                                <span>Sponsored</span>
+                    <div class="hex-service-card zero-gravity" style="animation-delay: 0.2s">
+                        <div class="hex-inner">
+                            <div class="hex-front">
+                                <div class="hex-icon">⚛️</div>
+                                <h3>Quantum Analytics</h3>
                             </div>
-                            <div class="mockup-content ads-gradient">
-                                <em class="unleash-velocity">Unleash Velocity</em>
+                            <div class="hex-back">
+                                <h3>Quantum Analytics</h3>
+                                <p>Processing data at the speed of thought.</p>
+                                <a href="#" class="inline-btn">View Details ></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hex-service-card zero-gravity" style="animation-delay: 0.4s">
+                        <div class="hex-inner">
+                            <div class="hex-front">
+                                <div class="hex-icon">🏗️</div>
+                                <h3>Web Architecture</h3>
+                            </div>
+                            <div class="hex-back">
+                                <h3>Web Architecture</h3>
+                                <p>Using Anti-Gravity physics and motion design.</p>
+                                <a href="#" class="inline-btn">View Details ></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Branding Reinforcement directly below gallery -->
-            <div style="text-align: center; margin-top: 30px; opacity: 0.6;">
-                <span class="gradient-text"
-                    style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase;">A
-                    BrandLoom X Experience</span>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="page-section">
+            <!-- Parallax Storytelling Layout -->
+            <div class="parallax-container">
+                <div class="parallax-layer layer-bg"></div>
+
+                <div class="container about-container">
+                    <div class="about-content parallax-layer layer-text">
+                        <h2 class="reveal-text">The <span class="text-gradient">Genesis</span> Protocol</h2>
+                        <p class="reveal-text delay-1">AI Nexus wasn't founded; it was initialized. We are a collective
+                            of digital architects, neural engineers, and quantum theorists dedicated to pushing the
+                            boundaries of what machine intelligence can achieve.</p>
+
+                        <div class="stats-grid mt-4">
+                            <div class="stat-item reveal-text delay-2">
+                                <span class="stat-num">99.9%</span>
+                                <span class="stat-label">Neural Efficiency</span>
+                            </div>
+                            <div class="stat-item reveal-text delay-3">
+                                <span class="stat-num">10PB+</span>
+                                <span class="stat-label">Data Synthesized</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-visual parallax-layer layer-visual">
+                        <div class="glass-panel">
+                            <div class="code-flow" id="simulated-code">
+                                <!-- JS injected code lines -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- About Me Section -->
-        <section id="about" class="about scroll-reveal">
-            <div class="glass-card narrative-card shimmer-hover">
-                <div class="interactive-header-container" onclick="this.classList.toggle('active')">
-                    <div class="header-gradient-bar"></div>
-                    <h2 class="section-title interactive-header glow-pulsing-header">Our <span
-                            class="gradient-text">Vision</span></h2>
+        <!-- Academy Portal Section -->
+        <section id="academy" class="page-section">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="reveal-text">Education & <span class="text-gradient">Academy</span> Portal</h2>
+                    <p class="reveal-text delay-1">Empowering the next generation of neural engineers and tech
+                        futurists.</p>
                 </div>
-                <h3 class="vision-subtitle gradient-text brand-signature-bold">BrandLoom X</h3>
-                <p>We blend traditional craftsmanship with digital innovation to scale brands globally. My core vision
-                    revolves around unlocking the hidden potential within every business narrative, ensuring that your
-                    digital footprint isn't just seen, but remembered.</p>
+
+                <div class="academy-stats-grid floating-elements mt-4">
+                    <div class="academy-stat-card magnetic-hover">
+                        <span class="stat-num reveal-text"><span class="counter-val" data-target="850">0</span>+</span>
+                        <span class="stat-label">Current Learners Active</span>
+                    </div>
+                    <div class="academy-stat-card magnetic-hover" style="animation-delay: 0.2s">
+                        <span class="stat-num reveal-text"><span class="counter-val" data-target="1200">0</span>+</span>
+                        <span class="stat-label">Alumni (Graduated)</span>
+                    </div>
+                    <div class="academy-stat-card magnetic-hover" style="animation-delay: 0.4s">
+                        <span class="stat-num reveal-text"><span class="counter-val" data-target="150">0</span>+</span>
+                        <span class="stat-label">New Admissions This Month</span>
+                    </div>
+                    <div class="academy-stat-card magnetic-hover" style="animation-delay: 0.6s">
+                        <span class="stat-num reveal-text red-glow-text">45</span>
+                        <span class="stat-label">Seats Left (Urgent)</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Careers Section -->
-        <section id="careers" class="careers scroll-reveal">
-            <div class="glass-card narrative-card shimmer-hover">
-                <div class="interactive-header-container" onclick="this.classList.toggle('active')">
-                    <div class="header-gradient-bar"></div>
-                    <h2 class="section-title interactive-header glow-pulsing-header">Join Our <span
-                            class="gradient-text">Creative Team</span></h2>
+        <section id="careers" class="page-section">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="reveal-text">Join The <span class="text-gradient">Collective</span></h2>
+                    <p class="reveal-text delay-1">Assimilate into our network of elite digital creators.</p>
                 </div>
-                <p>We are always looking for visionary marketers, designers, and strategists. At BrandLoom X, you don't
-                    just work on campaigns—you architect digital success.</p>
-                <a href="#contact" class="cta-button secondary-btn" style="margin-top: 20px;">
-                    <span class="cta-text">Apply Now</span>
-                </a>
-            </div>
-        </section>
 
-        <!-- Hub (Strategic Highlight Contact section) -->
-        <section id="contact" class="contact scroll-reveal">
-            <div class="glass-card shimmer-hover shimmer-container" style="padding: 50px 30px; border-radius: 20px;">
-                <div class="interactive-header-container" onclick="this.classList.toggle('active')">
-                    <div class="header-gradient-bar"></div>
-                    <h2 class="section-title interactive-header glow-pulsing-header"
-                        style="text-align: center; margin-bottom: 5px;">The <span class="gradient-text">Strategic
-                            Hub</span></h2>
-                    <h4 class="vision-subtitle brand-signature-bold"
-                        style="font-size: 1rem; color: var(--text-secondary); margin-top: -10px;">BrandLoom X Contact
-                    </h4>
-                </div>
-                <p class="hub-subtitle" style="text-align: center; margin-bottom: 40px; margin-top: 5px;">Connecting
-                    Multan to the World</p>
-                <div class="contact-grid"
-                    style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%;">
-
-                    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; width: 100%;">
-                        <a href="https://www.facebook.com/share/1bgy1SBogP/"
-                            class="glass-card contact-box interactive-service-card contact-link-box" target="_blank"
-                            rel="noopener noreferrer">
-                            <div class="icon-wrap interactive-svg breath-icon fb-icon">
-                                <svg viewBox="0 0 320 512" width="24" height="24">
-                                    <path fill="currentColor"
-                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
-                                </svg>
-                            </div>
-                            <p>Facebook</p>
-                        </a>
-
-                        <a href="https://wa.me/923079661669"
-                            class="glass-card contact-box interactive-service-card contact-link-box" target="_blank"
-                            rel="noopener noreferrer">
-                            <div class="icon-wrap interactive-svg breath-icon">
-                                <!-- Phone representation -->
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
-                                    <path fill="currentColor"
-                                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
-                                </svg>
-                            </div>
-                            <p>+92 307 9661669</p>
-                        </a>
-
-                        <a href="mailto:xbrandloom@gmail.com"
-                            class="glass-card contact-box interactive-service-card contact-link-box">
-                            <div class="icon-wrap interactive-svg breath-icon">
-                                <!-- Email Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
-                                    <path fill="currentColor"
-                                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
-                                </svg>
-                            </div>
-                            <p>xbrandloom@gmail.com</p>
-                        </a>
-                    </div>
-
-                    <!-- Highlighted Location Box (Placed Below) -->
-                    <div class="glass-card contact-box interactive-service-card highlight-box">
-                        <div class="icon-wrap interactive-svg hub-pulse-glow breath-icon">
-                            <!-- Location Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="24" height="24">
-                                <path fill="currentColor"
-                                    d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                            </svg>
+                <div class="jobs-grid">
+                    <div class="job-card zero-gravity pulse-border">
+                        <div class="job-card-content">
+                            <div class="job-dept">Engineering</div>
+                            <h3>AI Engineer</h3>
+                            <p>Remote • Full-time</p>
+                            <a href="#" class="magnetic-btn outline-btn small mt-2 pulsing-glow"><span>Apply
+                                    Now</span></a>
                         </div>
-                        <p>Basti Sadiqabad, Near DHA Multan</p>
+                    </div>
+
+                    <div class="job-card zero-gravity pulse-border" style="animation-delay: 0.1s">
+                        <div class="job-card-content">
+                            <div class="job-dept">Creative</div>
+                            <h3>UX Futurist</h3>
+                            <p>Remote • Full-time</p>
+                            <a href="#" class="magnetic-btn outline-btn small mt-2 pulsing-glow"><span>Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+
+                    <div class="job-card zero-gravity pulse-border" style="animation-delay: 0.2s">
+                        <div class="job-card-content">
+                            <div class="job-dept">Engineering</div>
+                            <h3>Backend Architect</h3>
+                            <p>Remote • Full-time</p>
+                            <a href="#" class="magnetic-btn outline-btn small mt-2 pulsing-glow"><span>Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+
+                    <div class="job-card zero-gravity pulse-border" style="animation-delay: 0.3s">
+                        <div class="job-card-content">
+                            <div class="job-dept">Data</div>
+                            <h3>Data Scientist</h3>
+                            <p>Hybrid • Full-time</p>
+                            <a href="#" class="magnetic-btn outline-btn small mt-2 pulsing-glow"><span>Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+
+                    <div class="job-card zero-gravity pulse-border" style="animation-delay: 0.4s">
+                        <div class="job-card-content">
+                            <div class="job-dept">Security</div>
+                            <h3>Cyber-Nexus Lead</h3>
+                            <p>Remote • Full-time</p>
+                            <a href="#" class="magnetic-btn outline-btn small mt-2 pulsing-glow"><span>Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="global-partners-box mt-4 center reveal-text">
+                    <h3 class="text-gradient">Global Partners</h3>
+                    <p>Proudly working with tech leaders in the USA, UK, Germany, and UAE.</p>
+                    <div class="partners-logo-grid mt-2">
+                        <div class="partner-logo">🇺🇸 USA HQ</div>
+                        <div class="partner-logo">🇬🇧 UK Hub</div>
+                        <div class="partner-logo">🇩🇪 Germany Ops</div>
+                        <div class="partner-logo">🇦🇪 UAE Branch</div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- Professional Horizontal Footer -->
-    <footer class="site-footer scroll-reveal">
-        <div class="footer-container">
-            <div class="footer-contact-row"
-                style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: nowrap; white-space: nowrap;">
-                <span class="footer-item">
-                    <svg viewBox="0 0 384 512" width="16" height="16" class="breath-icon">
-                        <path fill="currentColor"
-                            d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                    </svg>
-                    Basti Sadiqabad Near DHA Multan
-                </span>
-                <span class="footer-divider-dot">•</span>
-                <a href="https://www.facebook.com/share/1bgy1SBogP/"
-                    class="footer-item interactive-stroke fb-icon hover-purple" target="_blank"
-                    rel="noopener noreferrer">
-                    <svg viewBox="0 0 320 512" width="20" height="20" class="breath-icon">
-                        <path fill="currentColor"
-                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
-                    </svg>
-                    Facebook
-                </a>
-                <span class="footer-divider-dot">•</span>
-                <a href="https://wa.me/923079661669" class="footer-item interactive-stroke hover-purple" target="_blank"
-                    rel="noopener noreferrer">
-                    <svg viewBox="0 0 448 512" width="16" height="16" class="breath-icon">
-                        <path fill="currentColor"
-                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-                    </svg>
-                    +92 307 9661669
-                </a>
-                <span class="footer-divider-dot">•</span>
-                <a href="mailto:xbrandloom@gmail.com" class="footer-item interactive-stroke hover-purple">
-                    <svg viewBox="0 0 512 512" width="16" height="16" class="breath-icon">
-                        <path fill="currentColor"
-                            d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
-                    </svg>
-                    xbrandloom@gmail.com
-                </a>
+    <!-- Minimalist Footer -->
+    <footer class="main-footer" id="contact">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo-text small">Nexus Core <span class="text-gradient">v3.0</span></div>
+                <p class="footer-info"><strong>Headquarters:</strong> Nexus Core Tower, Silicon Block, Tech City,
+                    Pakistan.</p>
+                <p class="footer-info"><strong>Digital Reach:</strong> support@nexuscore.ai | www.nexuscore.ai</p>
+                <p class="footer-info"><strong>Global Hotline:</strong> +92 (300) 123-4567</p>
+                <p class="copyright mt-2">© 2026 Nexus Core AI Agency. Future Engineered.</p>
             </div>
 
-            <div class="gradient-divider"></div>
-
-            <p class="final-signature" style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px;">
-                &copy; 2026 BrandLoom X | Weaving Digital Success
-            </p>
+            <div class="footer-socials">
+                <!-- Magnetic Floating Social Icons -->
+                <a href="#" class="social-icon magnetic-hover magnetic-social float-hover">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon magnetic-hover magnetic-social float-hover"
+                    style="animation-delay: 0.1s">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon magnetic-hover magnetic-social float-hover"
+                    style="animation-delay: 0.2s">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Icon -->
-    <a href="https://wa.me/923079661669" class="whatsapp-float interactive-gradient-bg pulse-glow breath-icon"
-        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32">
-            <path fill="currentColor"
-                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-        </svg>
-    </a>
+    <!-- Core External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
 
-    <script src="script.js"></script>
+    <!-- Main Logic -->
+    <script src="app.js"></script>
+
+    <!-- EMERGENCY LOGIC FIX BYPASS -->
+    <style>
+        @keyframes urgentSecondPulse {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 16, 16, 0.5);
+            }
+
+            50% {
+                text-shadow: 0 0 30px rgba(255, 16, 16, 1), 0 0 50px rgba(255, 16, 16, 0.8);
+                color: #fff;
+            }
+
+            100% {
+                text-shadow: 0 0 10px rgba(255, 16, 16, 0.5);
+            }
+        }
+
+        .emergency-timer-glow {
+            color: #FF1010 !important;
+            animation: urgentSecondPulse 1s infinite !important;
+        }
+    </style>
+    <script>
+        // Running on purely DOM loaded to bypass external builder script blocking 
+        window.addEventListener('load', function () {
+            // 1. Force Stats (0+ to active logic)
+            const counters = document.querySelectorAll('.counter-val');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'), 10);
+                if (!target) return;
+
+                counter.innerText = '0';
+                const duration = 2000; // Exactly 2 seconds
+                const fps = 30; // 30 updates per second for smooth count
+                const totalFrames = (duration / 1000) * fps;
+                const increment = target / totalFrames;
+                let current = 0;
+
+                const countTimer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.innerText = target.toLocaleString();
+                        clearInterval(countTimer);
+                    } else {
+                        counter.innerText = Math.floor(current).toLocaleString();
+                    }
+                }, 1000 / fps);
+            });
+
+            // 2. Force Countdown Timer directly
+            const timerEl = document.getElementById('promo-countdown');
+            if (timerEl) {
+                // Apply strict emergency red 1-second pulse glow
+                timerEl.classList.add('emergency-timer-glow');
+
+                let timeRemaining = 48 * 60 * 60; // exactly 48 hours represented in seconds
+
+                setInterval(() => {
+                    if (timeRemaining <= 0) return;
+                    timeRemaining -= 1;
+
+                    const h = Math.floor(timeRemaining / 3600);
+                    const m = Math.floor((timeRemaining % 3600) / 60);
+                    const s = timeRemaining % 60;
+
+                    const displayH = h < 10 ? '0' + h : h;
+                    const displayM = m < 10 ? '0' + m : m;
+                    const displayS = s < 10 ? '0' + s : s;
+
+                    timerEl.innerText = `${displayH}:${displayM}:${displayS}`;
+                }, 1000); // Trigger strictly every 1000ms
+            }
+        });
+    </script>
 </body>
 
 </html>
